@@ -85,7 +85,7 @@ The programm runs in an endless loop. You can stop by pressing the Control and t
 
 The default update interval is set to 2 minutes. You may ajust it with the "--settings refresh" command.
 
-== Troubleshooting
+# Troubleshooting
 
 As first step activate the debug mode:
 ````
