@@ -197,13 +197,14 @@ namespace Converter
 
             if (String.IsNullOrEmpty(Properties.Settings.Default.ContestId))
             {
-                Console.WriteLine(" Invalid Contest Id");
+                Console.WriteLine(" Invalid or no Contest Id");
                 return;
             }
 
-            if (Properties.Settings.Default.Templates.Count < 1)
+             
+            if ((Properties.Settings.Default.Templates == null) || Properties.Settings.Default.Templates.Count < 1)
             {
-                Console.WriteLine(" No templates specified");
+                Console.WriteLine(" Error no templates configured, you need to set atleast one template");
                 return;
             }
 

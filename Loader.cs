@@ -92,10 +92,6 @@ namespace net.tschmid.scooring.converter
             {
                 response = ((HttpWebResponse)e.Response);
                 Console.WriteLine("Error code: {0}", ((HttpWebResponse)e.Response).StatusCode);
-
-                if (Converter.Properties.Settings.Default.Debug)
-                    Console.WriteLine(authorization);
-
             }
 
             return response.GetResponseStream();
