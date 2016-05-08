@@ -97,8 +97,10 @@ It will log execption and their stacktraces as well as failed requests into the 
 Setting the credentials is more tricky as it may sound. Even a small type results in a unauthorized response.
 
 The following message on is a strong indicator for bad credentials:
-    Error code: Unauthorized
-    Failed to load http://api.soaringspot.com/v1/ , 
+````
+Error code: Unauthorized
+Failed to load http://api.soaringspot.com/v1/ , 
+````
 
 Try to open the failedRequest.log in your browser. It is most likely a HTML file which contains further information 
 on the root cause. 
