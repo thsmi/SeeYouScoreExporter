@@ -7,16 +7,18 @@ Which means displaying the results on a projector via SeeYou's webview tool or i
 This tool brings the XML/HTML files as well as the webview tool back. It loads the results from soaringspot via the public api and renders them based on generic templates into files. In case the generated files are HTML they can be directly displayed in a slideshow. If the pages are to long they are automatically scrolled. The templates are generic, which allows to generate almost any text based file like json, html or xml.
 
 # Prerequisites 
-1. Create a API Key for your Competition
-As first step you need to create an api key for your competition.
-Refer to http://support.naviter.com/support/solutions/articles/5000632190-public-api-for-soaring-spot
+* Create a API Key for your Competition
 
-2. Download the binary
-You get it here https://github.com/thsmi/SeeYouScoreExporter/releases
-It is a command line tool. You need at least a .NET 4 Framework on our Computer.
+    A description how to get an api key can be found here http://support.naviter.com/support/solutions/articles/5000632190-public-api-for-soaring-spot
 
-3. .NET Framwork
-Make sure the .NET Framework 4.0 or newer is installed on your Computer. 
+* Download the binary
+    You get it here https://github.com/thsmi/SeeYouScoreExporter/releases
+
+    It is a command line tool. You need at least a .NET 4 Framework on our Computer.
+
+* .NET Framwork
+
+    Make sure the .NET Framework 4.0 or newer is installed on your Computer. 
 
 # Configuration 
 
