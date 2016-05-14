@@ -4,10 +4,9 @@ SeeYou Competition recently got all new CUBX files and other major changes. Besi
 
 Which means displaying the results on a projector via SeeYou's webview tool or in a smartphone is no more possible. Using the SoaringSpot Website is for both usecases not an option.  
 
-This tool brings the XML/HTML files as well as the webview tool back. It loads the results from soaringspot via the public api and renders them based on generic templates into files. In case the generated files are HTML they can be directly displayed in a slideshow. The templates are geneirc, which allows to generate almost any text based file like json, html or xml.
+This tool brings the XML/HTML files as well as the webview tool back. It loads the results from soaringspot via the public api and renders them based on generic templates into files. In case the generated files are HTML they can be directly displayed in a slideshow. If the pages are to long they are automatically scrolled. The templates are generic, which allows to generate almost any text based file like json, html or xml.
 
-
-## Prerequisites 
+# Prerequisites 
 1. Create a API Key for your Competition
 As first step you need to create an api key for your competition.
 Refer to http://support.naviter.com/support/solutions/articles/5000632190-public-api-for-soaring-spot
@@ -18,7 +17,7 @@ It is a command line tool. You need at least a .NET 4 Framework on our Computer.
 3. .NET Framwork
 Make sure the .NET Framework 4.0 or newer is installed on your Computer. 
 
-## Configure the tool. 
+# Configuration 
 
 It is a command line tool which needs to be configured before use. The confguration is interactive. This means with each call you can change only one setting at a time. In case you ommit the setting's parameters the current status will be displayed.
 
@@ -26,7 +25,7 @@ The settings are protable and stored in plain text in the ''SeeYouSoreExporter.c
 
 Both the Export (Extracting and rendering the results) and Slideshow (Presenting the HTML result files in a slideshow) are separate module they have a separate configuration interface and can be run independently from eachother.
 
-### Configuring the HTML/XML/JSON Export
+## HTML/XML/JSON Export Configuration
 
 In order to generate result files, you need to configure at least the api keys, the competition id and the template.
 
@@ -90,7 +89,7 @@ By default the templates are expected to be in the same directory as the SeeYouS
 SeeYouScoreExporter --export templates daily.html
 ````
 
-### Configuring the slide show
+## Slide show Configuration
 
 The slide show is used to persent html files in fullscreen in an endless loop. The slide show is highdpi aware which means it is designed to work well with 4K Displays.
 
@@ -108,9 +107,8 @@ SeeYouScoreExporter --slideshow templates daily.html
 
 The lookup path for the slideshow files can be defined by setting ""--slideshow directories". By default the files are expected to be in the same directory as the executable.
 
-#### 
 
-### Runing
+# Running
 
 Now as everything is configured run the programm:
 
@@ -120,9 +118,12 @@ SeeYouScoreExporter --run
 
 The programm runs in an endless loop. You can stop by pressing the Control and the C key.
 
+The full screen slideshow is also closed by "Control+C" or by pressing the "esc" button. 
+But unless the main console window is not terminated, the slideshow will respawn automatically.
+
 The export modules default update interval is set to 2 minutes. You may ajust it with the "--export refresh" command.
 
-The slideshow duration can be controlled via "--slideshow duration".
+The slideshow duration can be controlled via "--slideshow duration". 
 
 #### Disabling Modules
 
