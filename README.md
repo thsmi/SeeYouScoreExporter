@@ -12,6 +12,8 @@ As first step you need to create an api key for your competition.
 Refer to http://support.naviter.com/support/solutions/articles/5000632190-public-api-for-soaring-spot
 
 2. Download the binary
+
+You get it here https://github.com/thsmi/SeeYouScoreExporter/releases
 It is a command line tool. You need at least a .NET 4 Framework on our Computer.
 
 3. .NET Framwork
