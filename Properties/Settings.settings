@@ -1,30 +1,57 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Converter.Properties" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="net.tschmid.scooring.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="CredentialsClientId" Type="System.String" Scope="User">
+    <Setting Name="ExportCredentialsClientId" Provider="net.tschmid.scooring.utils.PortableSettingsProvider" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="CredentialsSecret" Type="System.String" Scope="User">
+    <Setting Name="ExportCredentialsSecret" Provider="net.tschmid.scooring.utils.PortableSettingsProvider" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="DirectoriesTemplates" Type="System.String" Scope="User">
+    <Setting Name="ExportTemplateDirectory" Provider="net.tschmid.scooring.utils.PortableSettingsProvider" Type="System.String" Scope="User">
       <Value Profile="(Default)">.\</Value>
     </Setting>
-    <Setting Name="DirectoriesOutput" Type="System.String" Scope="User">
+    <Setting Name="ExportWorkDirectory" Provider="net.tschmid.scooring.utils.PortableSettingsProvider" Type="System.String" Scope="User">
       <Value Profile="(Default)">.\</Value>
     </Setting>
-    <Setting Name="Templates" Type="System.Collections.Specialized.StringCollection" Scope="User">
+    <Setting Name="ExportTemplates" Provider="net.tschmid.scooring.utils.PortableSettingsProvider" Type="System.Collections.Specialized.StringCollection" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="ContestId" Type="System.String" Scope="User">
+    <Setting Name="ExportContestId" Provider="net.tschmid.scooring.utils.PortableSettingsProvider" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="UpdateCycle" Type="System.Int32" Scope="User">
+    <Setting Name="ExportUpdateCycle" Provider="net.tschmid.scooring.utils.PortableSettingsProvider" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">2</Value>
     </Setting>
-    <Setting Name="Debug" Type="System.Boolean" Scope="User">
+    <Setting Name="ExportDebug" Provider="net.tschmid.scooring.utils.PortableSettingsProvider" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="SlideshowTemplates" Provider="net.tschmid.scooring.utils.PortableSettingsProvider" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SlideshowEnabled" Provider="net.tschmid.scooring.utils.PortableSettingsProvider" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="SlideshowFilter" Provider="net.tschmid.scooring.utils.PortableSettingsProvider" Type="System.String" Scope="User">
+      <Value Profile="(Default)">today</Value>
+    </Setting>
+    <Setting Name="SlideshowPreScrollDelay" Provider="net.tschmid.scooring.utils.PortableSettingsProvider" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="SlideshowPostScrollDelay" Provider="net.tschmid.scooring.utils.PortableSettingsProvider" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="ExportEnabled" Provider="net.tschmid.scooring.utils.PortableSettingsProvider" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="SlideshowDebug" Provider="net.tschmid.scooring.utils.PortableSettingsProvider" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ExportFilter" Provider="net.tschmid.scooring.utils.PortableSettingsProvider" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SlideshowWorkDirectory" Provider="net.tschmid.scooring.utils.PortableSettingsProvider" Type="System.String" Scope="User">
+      <Value Profile="(Default)">.\</Value>
     </Setting>
   </Settings>
 </SettingsFile>

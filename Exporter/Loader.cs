@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Script.Serialization;
 
-namespace net.tschmid.scooring.converter
+namespace net.tschmid.scooring.exporter
 {
     public class Loader
     {
@@ -71,9 +71,9 @@ namespace net.tschmid.scooring.converter
 
             HMACSHA256 hmac = new HMACSHA256();
 
-            string signature = CreateToken("" + nonce + date + Converter.Properties.Settings.Default.CredentialsClientId, Converter.Properties.Settings.Default.CredentialsSecret);
+            string signature = CreateToken("" + nonce + date + Properties.Settings.Default.ExportCredentialsClientId, Properties.Settings.Default.ExportCredentialsSecret);
 
-            string authorization = "http://api.soaringspot.com/v1/hmac/v1 ClientID=\"" + Converter.Properties.Settings.Default.CredentialsClientId + "\", Signature=\"" + signature + "\", Nonce=\"" + nonce + "\", Created=\"" + date + "\"";
+            string authorization = "http://api.soaringspot.com/v1/hmac/v1 ClientID=\"" + Properties.Settings.Default.ExportCredentialsClientId + "\", Signature=\"" + signature + "\", Nonce=\"" + nonce + "\", Created=\"" + date + "\"";
 
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
             request.Method = "GET";
@@ -121,10 +121,10 @@ namespace net.tschmid.scooring.converter
             {
                 Console.WriteLine("Failed to load " + this.Url);
 
-                if (Converter.Properties.Settings.Default.Debug)
+                if (Properties.Settings.Default.ExportDebug)
                 {
                     File.WriteAllText(".\\failedResponse.log", data);
-                    Console.WriteLine("Response dumped to .\\failedResponse.log", data);
+                    Console.WriteLine("Response dumped to .\\failedResponse.log");
                 }
 
                 return new Dictionary<string, dynamic>();

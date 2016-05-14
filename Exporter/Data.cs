@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 
-namespace net.tschmid.scooring.converter
+namespace net.tschmid.scooring.exporter
 {
     public class Task
     {
@@ -146,13 +146,16 @@ namespace net.tschmid.scooring.converter
             return (new Loader(this.ImageLink)).LoadRaw();
         }
 
-        public void Save(string workDir)
+        public void Save(string workdir)
         {
-            if (File.Exists(workDir + this.Name))
+            string file = Path.Combine(workdir, this.Name);
+
+            if (File.Exists(file))   
                 return;
             
             Stream input = this.GetImage();
-            Stream output = File.Create(Converter.Properties.Settings.Default.DirectoriesOutput+ this.Name);
+            
+            Stream output = File.Create(file);
 
             byte[] buffer = new byte[8 * 1024];
             int len;

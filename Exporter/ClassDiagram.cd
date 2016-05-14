@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="net.tschmid.scooring.exporter.Task" Collapsed="true">
+    <Position X="9" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAACIAGEQAACAABAwEAAAAwQEAAACAhBAQEgAAACAAg=</HashCode>
+      <FileName>Exporter\Data.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="net.tschmid.scooring.exporter.Image" Collapsed="true">
+    <Position X="9" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAQQEAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Exporter\Data.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="net.tschmid.scooring.exporter.Result" Collapsed="true">
+    <Position X="7.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AiGBIAgEAAAAgAEAAAIAQgQAEAAAAQAEAAIAAACAAAo=</HashCode>
+      <FileName>Exporter\Data.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="net.tschmid.scooring.exporter.Contest" Collapsed="true">
+    <Position X="5.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEACAAAAAAIAAAAAAAAAAAQgAAIAAAAAgAAAAEAEACA=</HashCode>
+      <FileName>Exporter\Data.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="net.tschmid.scooring.exporter.DataConverter" Collapsed="true">
+    <Position X="7.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAABAAAAABAAAAAAABAAAAAEAAAAAABAQAAAAEAA=</HashCode>
+      <FileName>Exporter\Data.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="net.tschmid.scooring.exporter.Point" Collapsed="true">
+    <Position X="5.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAgEAAAQAABEAIAARAAUACAABEAQEAAAAAEEA=</HashCode>
+      <FileName>Exporter\Data.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="net.tschmid.scooring.exporter.Clazz" Collapsed="true">
+    <Position X="1.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAgAAAAAgAAQAAAAgACAA=</HashCode>
+      <FileName>Exporter\Data.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="net.tschmid.scooring.exporter.Loader" Collapsed="true">
+    <Position X="3.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAgAEAAAAAAAAAAAAAAAAAAAAAAAABCEAAAAACCAA=</HashCode>
+      <FileName>Exporter\Loader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="net.tschmid.scooring.exporter.TemplateExporter" Collapsed="true">
+    <Position X="0.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exporter\Templates.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="net.tschmid.scooring.htmlviewer.HtmlViewerConsoleWrapper" Collapsed="true">
+    <Position X="6.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HtmlViewer\ConsoleDialogLoader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="net.tschmid.scooring.htmlviewer.HighDpiUiHandler" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQACQAAAAAIAAAIAANCAAAABAAAACQAAAAAAgAAJCA=</HashCode>
+      <FileName>HtmlViewer\HighDpiUiHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="net.tschmid.scooring.htmlviewer.HighDpiWebViewer" Collapsed="true">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAGAgAAAAAACABAQCAAAAAAAACAAwAAAAAAA=</HashCode>
+      <FileName>HtmlViewer\HighDpiWebViewer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="net.tschmid.scooring.htmlviewer.HtmlViewer" Collapsed="true">
+    <Position X="2.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAIAAADgACQAAAACAAAACAAAAIAAAAIAAAAAAAgA=</HashCode>
+      <FileName>HtmlViewer\HtmlViewer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="net.tschmid.scooring.htmlviewer.NativeMethods" Collapsed="true">
+    <Position X="4.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>HtmlViewer\NativeMethods.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="net.tschmid.scooring.htmlviewer.DOCHOSTUIINFO" Collapsed="true">
+    <Position X="2.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAEAAAAAAAAAAAAAAAAAAAAAEAAgAAAAAAAAABA=</HashCode>
+      <FileName>HtmlViewer\HighDpiUiHandler.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="net.tschmid.scooring.htmlviewer.tagMSG" Collapsed="true">
+    <Position X="4.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAIAAAAAAAAQAAAAAAAAAAAAAEAAAAAAAAgAACA=</HashCode>
+      <FileName>HtmlViewer\HighDpiUiHandler.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="net.tschmid.scooring.htmlviewer.tagRECT" Collapsed="true">
+    <Position X="4.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAgAAAAIAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>HtmlViewer\HighDpiUiHandler.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="net.tschmid.scooring.htmlviewer.tagPOINT" Collapsed="true">
+    <Position X="2.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAAAAA=</HashCode>
+      <FileName>HtmlViewer\HighDpiUiHandler.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="net.tschmid.scooring.htmlviewer.IDocHostUIHandler" Collapsed="true">
+    <Position X="4.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQCAAEAAgIAABAAAFAAgAABAAAACCAAAAAAgAAMAA=</HashCode>
+      <FileName>HtmlViewer\HighDpiUiHandler.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="net.tschmid.scooring.htmlviewer.ICustomDoc" Collapsed="true">
+    <Position X="2.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HtmlViewer\HighDpiUiHandler.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="net.tschmid.scooring.htmlviewer.DOCHOSTUIFLAG" Collapsed="true">
+    <Position X="4.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAIABIgAAIKCQgAAEBAAGAIQQAgAIAAAggAGDgwA=</HashCode>
+      <FileName>HtmlViewer\HighDpiUiHandler.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="net.tschmid.scooring.htmlviewer.DOCHOSTUITYPE" Collapsed="true">
+    <Position X="2.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>HtmlViewer\HighDpiUiHandler.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="net.tschmid.scooring.htmlviewer.DOCHOSTUIDBLCLK" Collapsed="true">
+    <Position X="2.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAw=</HashCode>
+      <FileName>HtmlViewer\HighDpiUiHandler.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

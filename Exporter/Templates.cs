@@ -1,11 +1,12 @@
-﻿using System;
+﻿using net.tschmid.scooring.utils;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text.RegularExpressions;
 
-namespace net.tschmid.scooring.converter
+namespace net.tschmid.scooring.exporter
 {
     public class TemplateExporter
     {
@@ -24,9 +25,13 @@ namespace net.tschmid.scooring.converter
             {
                 foreach (Task task in clazz.GetTasks())
                 {
+                    
+                    if (!(new DateUtils()).Matches(Properties.Settings.Default.ExportFilter, task.Date))
+                        continue;
+
                     foreach (Template template in templates)
                     {
-                        template.Export(Converter.Properties.Settings.Default.DirectoriesOutput, contest, clazz, task);
+                        template.Export(contest, clazz, task);
                     }
                 }
             }
@@ -43,20 +48,26 @@ namespace net.tschmid.scooring.converter
             this.filename = filename;
         }
 
-        public void Export(string workDir, Contest contest, Clazz clazz, Task task)
+        public void Export(Contest contest, Clazz clazz, Task task)
         {
 
-            string content = File.ReadAllText(Converter.Properties.Settings.Default.DirectoriesTemplates + filename + ".tpl");
-            task.GetClazz();
+            string template = Path.Combine(Properties.Settings.Default.ExportTemplateDirectory, filename + ".tpl");
+            string content = File.ReadAllText(template);
+            //task.GetClazz();
 
             content = fillTemplate(content, contest, clazz, task);
-            System.IO.File.WriteAllText(workDir + task.Date + "_" + clazz.Type + "_" + filename, content);
+
+            string file = Path.Combine(Properties.Settings.Default.ExportWorkDirectory, task.Date + "_" + clazz.Type + "_" + filename);
+
+            if (Properties.Settings.Default.ExportDebug)
+                Console.WriteLine("[" + DateTime.Now.ToString("HH:mm:ss") + " Export] Exporting file " + file);
+            
+            File.WriteAllText(file, content);
         }
         
         private string fillResults(string template, Task task)
         {
             const string SCORE_REG_EX = "(<Score:Results.*?>)(.*?)(</Score:Results>)";
-            //_htmlContent = Regex.Replace(_htmlContent, "< style.*?< /style>", "", RegexOptions.Singleline | RegexOptions.IgnoreCase);
             MatchCollection matches = Regex.Matches(template, SCORE_REG_EX, RegexOptions.Singleline);
 
             if (matches.Count == 0)
@@ -206,7 +217,7 @@ namespace net.tschmid.scooring.converter
 
             foreach (Image image in task.GetImages())
             {
-                image.Save("d:\\");
+                image.Save(Properties.Settings.Default.ExportWorkDirectory);
 
                 resultTpl = matches[0].Groups[2].Value;
                 resultTpl = Regex.Replace(resultTpl, "<Image:Src.*?/>", "" + image.Name);

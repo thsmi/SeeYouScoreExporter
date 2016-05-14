@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Converter.Properties {
+namespace net.tschmid.scooring.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -24,97 +24,221 @@ namespace Converter.Properties {
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.SettingsProviderAttribute(typeof(net.tschmid.scooring.utils.PortableSettingsProvider))]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string CredentialsClientId {
+        public string ExportCredentialsClientId {
             get {
-                return ((string)(this["CredentialsClientId"]));
+                return ((string)(this["ExportCredentialsClientId"]));
             }
             set {
-                this["CredentialsClientId"] = value;
+                this["ExportCredentialsClientId"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.SettingsProviderAttribute(typeof(net.tschmid.scooring.utils.PortableSettingsProvider))]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string CredentialsSecret {
+        public string ExportCredentialsSecret {
             get {
-                return ((string)(this["CredentialsSecret"]));
+                return ((string)(this["ExportCredentialsSecret"]));
             }
             set {
-                this["CredentialsSecret"] = value;
+                this["ExportCredentialsSecret"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.SettingsProviderAttribute(typeof(net.tschmid.scooring.utils.PortableSettingsProvider))]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute(".\\")]
-        public string DirectoriesTemplates {
+        public string ExportTemplateDirectory {
             get {
-                return ((string)(this["DirectoriesTemplates"]));
+                return ((string)(this["ExportTemplateDirectory"]));
             }
             set {
-                this["DirectoriesTemplates"] = value;
+                this["ExportTemplateDirectory"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.SettingsProviderAttribute(typeof(net.tschmid.scooring.utils.PortableSettingsProvider))]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute(".\\")]
-        public string DirectoriesOutput {
+        public string ExportWorkDirectory {
             get {
-                return ((string)(this["DirectoriesOutput"]));
+                return ((string)(this["ExportWorkDirectory"]));
             }
             set {
-                this["DirectoriesOutput"] = value;
+                this["ExportWorkDirectory"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.SettingsProviderAttribute(typeof(net.tschmid.scooring.utils.PortableSettingsProvider))]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Collections.Specialized.StringCollection Templates {
+        public global::System.Collections.Specialized.StringCollection ExportTemplates {
             get {
-                return ((global::System.Collections.Specialized.StringCollection)(this["Templates"]));
+                return ((global::System.Collections.Specialized.StringCollection)(this["ExportTemplates"]));
             }
             set {
-                this["Templates"] = value;
+                this["ExportTemplates"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.SettingsProviderAttribute(typeof(net.tschmid.scooring.utils.PortableSettingsProvider))]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string ContestId {
+        public string ExportContestId {
             get {
-                return ((string)(this["ContestId"]));
+                return ((string)(this["ExportContestId"]));
             }
             set {
-                this["ContestId"] = value;
+                this["ExportContestId"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.SettingsProviderAttribute(typeof(net.tschmid.scooring.utils.PortableSettingsProvider))]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("2")]
-        public int UpdateCycle {
+        public int ExportUpdateCycle {
             get {
-                return ((int)(this["UpdateCycle"]));
+                return ((int)(this["ExportUpdateCycle"]));
             }
             set {
-                this["UpdateCycle"] = value;
+                this["ExportUpdateCycle"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.SettingsProviderAttribute(typeof(net.tschmid.scooring.utils.PortableSettingsProvider))]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool Debug {
+        public bool ExportDebug {
             get {
-                return ((bool)(this["Debug"]));
+                return ((bool)(this["ExportDebug"]));
             }
             set {
-                this["Debug"] = value;
+                this["ExportDebug"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.SettingsProviderAttribute(typeof(net.tschmid.scooring.utils.PortableSettingsProvider))]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Collections.Specialized.StringCollection SlideshowTemplates {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["SlideshowTemplates"]));
+            }
+            set {
+                this["SlideshowTemplates"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.SettingsProviderAttribute(typeof(net.tschmid.scooring.utils.PortableSettingsProvider))]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool SlideshowEnabled {
+            get {
+                return ((bool)(this["SlideshowEnabled"]));
+            }
+            set {
+                this["SlideshowEnabled"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.SettingsProviderAttribute(typeof(net.tschmid.scooring.utils.PortableSettingsProvider))]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("today")]
+        public string SlideshowFilter {
+            get {
+                return ((string)(this["SlideshowFilter"]));
+            }
+            set {
+                this["SlideshowFilter"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.SettingsProviderAttribute(typeof(net.tschmid.scooring.utils.PortableSettingsProvider))]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("10")]
+        public int SlideshowPreScrollDelay {
+            get {
+                return ((int)(this["SlideshowPreScrollDelay"]));
+            }
+            set {
+                this["SlideshowPreScrollDelay"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.SettingsProviderAttribute(typeof(net.tschmid.scooring.utils.PortableSettingsProvider))]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("10")]
+        public int SlideshowPostScrollDelay {
+            get {
+                return ((int)(this["SlideshowPostScrollDelay"]));
+            }
+            set {
+                this["SlideshowPostScrollDelay"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.SettingsProviderAttribute(typeof(net.tschmid.scooring.utils.PortableSettingsProvider))]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool ExportEnabled {
+            get {
+                return ((bool)(this["ExportEnabled"]));
+            }
+            set {
+                this["ExportEnabled"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.SettingsProviderAttribute(typeof(net.tschmid.scooring.utils.PortableSettingsProvider))]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool SlideshowDebug {
+            get {
+                return ((bool)(this["SlideshowDebug"]));
+            }
+            set {
+                this["SlideshowDebug"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.SettingsProviderAttribute(typeof(net.tschmid.scooring.utils.PortableSettingsProvider))]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ExportFilter {
+            get {
+                return ((string)(this["ExportFilter"]));
+            }
+            set {
+                this["ExportFilter"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.SettingsProviderAttribute(typeof(net.tschmid.scooring.utils.PortableSettingsProvider))]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(".\\")]
+        public string SlideshowWorkDirectory {
+            get {
+                return ((string)(this["SlideshowWorkDirectory"]));
+            }
+            set {
+                this["SlideshowWorkDirectory"] = value;
             }
         }
     }
