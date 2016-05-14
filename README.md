@@ -7,7 +7,7 @@ Which means displaying the results on a projector via SeeYou's webview tool or i
 This tool brings the XML/HTML files as well as the webview tool back. It loads the results from soaringspot via the public api and renders them based on generic templates into files. In case the generated files are HTML they can be directly displayed in a slideshow. The templates are geneirc, which allows to generate almost any text based file like json, html or xml.
 
 
-# Prerequisites 
+## Prerequisites 
 1. Create a API Key for your Competition
 As first step you need to create an api key for your competition.
 Refer to http://support.naviter.com/support/solutions/articles/5000632190-public-api-for-soaring-spot
@@ -18,7 +18,7 @@ It is a command line tool. You need at least a .NET 4 Framework on our Computer.
 3. .NET Framwork
 Make sure the .NET Framework 4.0 or newer is installed on your Computer. 
 
-# Configure the tool. 
+## Configure the tool. 
 
 It is a command line tool which needs to be configured before use. The confguration is interactive. This means with each call you can change only one setting at a time. In case you ommit the setting's parameters the current status will be displayed.
 
@@ -26,11 +26,11 @@ The settings are protable and stored in plain text in the ''SeeYouSoreExporter.c
 
 Both the Export (Extracting and rendering the results) and Slideshow (Presenting the HTML result files in a slideshow) are separate module they have a separate configuration interface and can be run independently from eachother.
 
-## Configuring the HTML/XML/JSON Export
+### Configuring the HTML/XML/JSON Export
 
 In order to generate result files, you need to configure at least the api keys, the competition id and the template.
 
-### Api keys/Credentials
+#### Api keys/Credentials
 
 The api keys are used for authentication. Without them you won't be allowed to access any data on soaring spot.
 
@@ -47,7 +47,7 @@ If you want to verify if the credentials where set correctly. Do the same call b
 SeeYouScoreExporter --export credentials
 ````
 
-### Contest Id
+#### Contest Id
 
 The next step is setting the contest id. The tool exports only one contest. 
 
@@ -75,7 +75,7 @@ Grab the contest id of your competition, in this example 1844 end set it via
 SeeYouScoreExporter --export contest 1844
 ````
 
-### Templates
+#### Templates
 
 Template files are used to render the results. They are plaintext files with tokens/placeholders which will be replaced while parsing. The project includes examples for such templates in the tpl folder.
 
@@ -90,6 +90,18 @@ By default the templates are expected to be in the same directory as the SeeYouS
 SeeYouScoreExporter --export templates daily.html
 ````
 
+### Configuring the slide show
+
+The slide show is used to persent html files in fullscreen in an endless loop. The slide show is highdpi aware which means it is designed to work well with 4K Displays.
+
+At minimum you need to specify the template which should be displayed.
+
+#### Template name
+
+The Template name is basically the generated name 
+
+#### 
+
 ### Runing
 
 Now as everything is configured run the programm:
@@ -101,6 +113,32 @@ SeeYouScoreExporter --run
 The programm runs in an endless loop. You can stop by pressing the Control and the C key.
 
 The default update interval is set to 2 minutes. You may ajust it with the "--export refresh" command.
+
+#### Disabling Modules
+
+The export and the slideshow are independent. In case you want only the file exporter you can disable the slideshow module by calling
+
+````
+SeeYouScoreExporter --slideshow enabled false
+````
+
+or in case you want just the slideshow, you can disable the export module by calling.
+
+````
+SeeYouScoreExporter --export enabled false
+````
+
+#### Restrict Results 
+By default the tool displays and/or genereates files for all available competition days.
+
+If you want to present or generate files just for a specific day use the "day" parameter. Both modules support it. You can either specify a date string "YYYY-MM-DD" or use the strings today and yesterday. In case the day parameter is empty all files for the specified will be displayed or generated.
+
+If you want to restrict both the export or the slideshow to the current day use:
+
+````
+SeeYouScoreExporter --export day today
+SeeYouScoreExporter --slideshow day today
+````
 
 # Troubleshooting
 
