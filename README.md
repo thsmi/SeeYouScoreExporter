@@ -12,7 +12,7 @@ This tool brings the XML/HTML files as well as the webview tool back. It loads t
 As first step you need to create an api key for your competition.
 Refer to http://support.naviter.com/support/solutions/articles/5000632190-public-api-for-soaring-spot
 
-2. Download the binary.
+2. Download the binary
 It is a command line tool. You need at least a .NET 4 Framework on our Computer.
 
 3. .NET Framwork
@@ -96,9 +96,17 @@ The slide show is used to persent html files in fullscreen in an endless loop. T
 
 At minimum you need to specify the template which should be displayed.
 
-#### Template name
+#### Templates
 
-The Template name is basically the generated name 
+You need to specify the template which should be displayed. The files are expeced to have the same naming as with the export module.
+
+If you want to display the exported files from previous example specify daily.html as template.
+
+````
+SeeYouScoreExporter --slideshow templates daily.html
+````
+
+The lookup path for the slideshow files can be defined by setting ""--slideshow directories". By default the files are expected to be in the same directory as the executable.
 
 #### 
 
@@ -112,11 +120,13 @@ SeeYouScoreExporter --run
 
 The programm runs in an endless loop. You can stop by pressing the Control and the C key.
 
-The default update interval is set to 2 minutes. You may ajust it with the "--export refresh" command.
+The export modules default update interval is set to 2 minutes. You may ajust it with the "--export refresh" command.
+
+The slideshow duration can be controlled via "--slideshow duration".
 
 #### Disabling Modules
 
-The export and the slideshow are independent. In case you want only the file exporter you can disable the slideshow module by calling
+Export and slideshow are independent modules. In case you need only the file export you can disable the slideshow module by calling
 
 ````
 SeeYouScoreExporter --slideshow enabled false
