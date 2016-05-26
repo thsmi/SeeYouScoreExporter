@@ -2,29 +2,27 @@
 
 SeeYou Competition recently got all new CUBX files and other major changes. Beside lots of improvements, sadly the xml files with the scooring are gone.   
 
-Which means displaying the results on a projector via SeeYou's webview tool or in a smartphone is no more possible. Using the SoaringSpot Website is for both usecases not an option.  
+Which means displaying the results on a projector via SeeYou's webview tool or on a smartphone is no more possible. Using the SoaringSpot Website is for both usecases not an option.  
 
-This tool brings the XML/HTML files as well as the webview tool back. It loads the results from soaringspot via the public api and renders them based on generic templates into files. In case the generated files are HTML they can be directly displayed in a slideshow. If the pages are to long they are automatically scrolled. The templates are generic, which allows to generate almost any text based file like json, html or xml.
+This tool brings the XML/HTML files as well as the webview tool back. It loads the results from SoaringSpot via the public api and renders them based on generic templates into files. In case the generated files are HTML they can be directly displayed in a slideshow. If the pages are to long they are automatically scrolled. The templates are generic, which allows to generate almost any text based file like json, html or xml.
 
 # Prerequisites 
 * Create a API Key for your Competition
-
     A description how to get an api key can be found here http://support.naviter.com/support/solutions/articles/5000632190-public-api-for-soaring-spot
 
 * Download the binary
     You get it here https://github.com/thsmi/SeeYouScoreExporter/releases
 
-    It is a command line tool. You need at least a .NET 4 Framework on our Computer.
+    It is a command line tool. No installer, just unzip it. 
 
 * .NET Framwork
-
     Make sure the .NET Framework 4.0 or newer is installed on your Computer. 
 
 # Configuration 
 
-It is a command line tool which needs to be configured before use. The confguration is interactive. This means with each call you can change only one setting at a time. In case you ommit the setting's parameters the current status will be displayed.
+It is a command line tool which needs to be configured before use. The configuration is pseudo interactive. This means with each call you can change only one setting at a time. In case you ommit the setting's parameters the current status will be displayed.
 
-The settings are protable and stored in plain text in the ''SeeYouSoreExporter.config'' next to the ''SeeYouScoreExporter.exe''. 
+The settings are portable and stored in plain text in the ''SeeYouSoreExporter.config'' next to the ''SeeYouScoreExporter.exe''. 
 
 Both the Export (Extracting and rendering the results) and Slideshow (Presenting the HTML result files in a slideshow) are separate module they have a separate configuration interface and can be run independently from eachother.
 
@@ -36,8 +34,7 @@ In order to generate result files, you need to configure at least the api keys, 
 
 The api keys are used for authentication. Without them you won't be allowed to access any data on soaring spot.
 
-The api keys is are log string they are set by the following call. 
-Enclose the keys in double quotes as they may contain special characters which clash with the command line.
+The api keys are long strings they are set by the following call. Enclose the keys in double quotes as they may contain special characters which clash with the command line.
 
 ```
 SeeYouScoreExporter --export credential "YOUR_CLIENT_ID"  "YOUR_SECRET"
@@ -81,7 +78,7 @@ SeeYouScoreExporter --export contest 1844
 
 Template files are used to render the results. They are plaintext files with tokens/placeholders which will be replaced while parsing. The project includes examples for such templates in the tpl folder.
 
-In this example we want to create the daily score which is based upon the template named daily.html.tpl. 
+In this example we create the daily score which is based upon the template named daily.html.tpl. 
 So the template name will be like the filename without the tpl extension in our case "daily.html". The generated file's names have always the following pattern YYYY-MM-DD_CLASS_TEMPLATE e.g. 2016-04-30_15_meter_daily.html.
 
 You can specify as many templates as you want. Each templates is run against all classes and tasks.
@@ -121,7 +118,7 @@ SeeYouScoreExporter --run
 
 The programm runs in an endless loop. You can stop by pressing the Control and the C key.
 
-The full screen slideshow is also closed by "Control+C" or by pressing the "esc" button. 
+The full screen slideshow is also closed by "Control+C" or by pressing the "esc" key. 
 But unless the main console window is not terminated, the slideshow will respawn automatically.
 
 The export modules default update interval is set to 2 minutes. You may ajust it with the "--export refresh" command.
