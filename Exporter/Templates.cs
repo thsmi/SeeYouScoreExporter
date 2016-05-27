@@ -161,7 +161,12 @@ namespace net.tschmid.scooring.exporter
                 string pointTpl = "";
                 string pointStr = "";
 
-                foreach (Point point in task.GetPoints())
+                List<Point> points = task.GetPoints();
+
+                // sort by point index...
+                points = points.OrderBy(o => (o.Index)).ToList();
+
+                foreach (Point point in points)
                 {
                     pointTpl = match.Groups[2].Value;
                     pointTpl = Regex.Replace(pointTpl, "<Point:Name.*?/>", "" + point.Name);
@@ -183,6 +188,12 @@ namespace net.tschmid.scooring.exporter
                     
                     pointTpl = Regex.Replace(pointTpl, "<Point:OzRadius1.*?/>", "" + point.OzRadius1);
                     pointTpl = Regex.Replace(pointTpl, "<Point:OzRadius2.*?/>", "" + point.OzRadius2);
+
+                    pointTpl = Regex.Replace(pointTpl, "<Point:OzLine.*?/>", "" + point.OzLine);
+                    pointTpl = Regex.Replace(pointTpl, "<Point:OzMaxAltitude.*?/>", "" + point.OzMaxAltitude);
+                    pointTpl = Regex.Replace(pointTpl, "<Point:OzReduce.*?/>", "" + point.OzReduce);
+                    pointTpl = Regex.Replace(pointTpl, "<Point:OzType.*?/>", "" + point.OzType);
+
 
                     pointStr += pointTpl;
                 }

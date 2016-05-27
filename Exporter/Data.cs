@@ -323,8 +323,11 @@ namespace net.tschmid.scooring.exporter
 
             decimal coord = data[key];
 
-            int seconds = ((int)(Decimal.Multiply(coord, 3600)) % 60);
-            int minute = ((int)(Decimal.Multiply(coord, 60)) % 60);
+            
+            coord = decimal.Multiply(coord, (decimal)(180.0 / Math.PI));
+
+            int seconds = ((int)(decimal.Multiply(coord, 3600)) % 60);
+            int minute = ((int)(decimal.Multiply(coord, 60)) % 60);
             int degree = (((int)(coord)) % 60);
 
             return "" + degree.ToString("0") + "° " + minute.ToString("00") + "' " + seconds.ToString("00") + "''";
@@ -386,7 +389,10 @@ namespace net.tschmid.scooring.exporter
             if (!data.ContainsKey(key))
                 return "";
 
+            
             decimal degree = data[key];
+
+            degree = decimal.Multiply(degree, (decimal)(180.0 / Math.PI));
 
             return degree.ToString("0.00°");
         }
